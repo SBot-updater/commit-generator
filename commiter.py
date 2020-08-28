@@ -4,7 +4,7 @@ from subprocess import run
 from datetime import datetime
 if __name__ == "__main__":
 	branch = "master"
-	minutes = 5
+	seconds = 5
 	while True:
 		run(['python3', 'update_file.py'])
 		run(['git', 'fetch'])
@@ -12,5 +12,5 @@ if __name__ == "__main__":
 		run(['git', 'add', '.'])
 		run(['git', 'commit', '-m', "Update : {}".format(datetime.now().strftime("%d-%m-%y %H:%M"))])
 		run(['git', 'push', 'origin', 'master'])
-		sleep(60 * minutes)
+		sleep(seconds)
 
