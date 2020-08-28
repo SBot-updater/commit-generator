@@ -7,8 +7,8 @@ if __name__ == "__main__":
 	seconds = .5
 	while True:
 		run(['python3', 'update_file.py'])
-		run(['git', 'fetch'])
-		run(['git', 'pull', 'origin', 'master'])
+		#run(['git', 'fetch'])
+		#run(['git', 'pull', 'origin', 'master'])
 		run(['git', 'add', '.'])
 		run(['git', 'commit', '-m', "Update : {}".format(datetime.now().strftime("%d-%m-%y %H:%M:%S"))])
 		run(['git', 'push', 'origin', 'master'])
